@@ -152,4 +152,27 @@ public class UnitTestsJava8 {
             }
         }
     }
+
+    @Test
+    public void test4Option2() {
+
+        String str = "ertrew tjbcjd fufuguo mfkgphpj4 ltkylhp eeeeekd igjjdml4 iiiiihjgn";
+
+        String[] newArray = str.split(" ");
+        String vowStr = "AEIOUaeiou";
+
+        Arrays.stream(newArray).forEach((x) ->{
+            int vowels = 0;
+            for (int i = 0; i < x.length(); i++) {
+                if (vowStr.indexOf(x.charAt(i)) != -1) {
+                    vowels++;
+                }
+            }
+            if (vowels > (x.length() - 1 - vowels)) {
+                System.out.println(x);
+            }
+        });
+
+    }
+
 }
